@@ -1,0 +1,20 @@
+* {
+    bg-col: ${--background--};
+    bg-col-transparent: ${--background--}dd;
+    bg-col-element: ${--background--}df;
+    bg-col-light: ${--button--};
+    border-col: ${--button--};
+    selected-col: ${--button--};
+    tab: ${--button--};
+    tab-selected: ${--background--};
+    fg-col: ${--foreground--};
+    fg-col2: ${--background--};
+    blank: ${--background2--};
+    blank-underline: ${--background2-bottom--};
+    button: ${--button--};
+    button-underline: ${--button-bottom--};
+    window: ${--background3--};
+    window-underline: ${--background3-bottom--};
+
+    width: 600;
+}

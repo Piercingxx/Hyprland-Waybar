@@ -1,0 +1,63 @@
+[colors.primary]
+background = "${--background--}"
+foreground = "${--foreground--}"
+
+[colors.normal]
+black = "${--terminal-black--}"
+red = "${--terminal-red--}"
+green = "${--terminal-green--}"
+yellow = "${--terminal-yellow--}"
+blue = "${--terminal-blue--}"
+magenta = "${--terminal-magenta--}"
+cyan = "${--terminal-cyan--}"
+white = "${--terminal-white--}"
+
+[colors.bright]
+black = "${--terminal-black-bright--}"
+red = "${--terminal-red-bright--}"
+green = "${--terminal-green-bright--}"
+yellow = "${--terminal-yellow-bright--}"
+blue = "${--terminal-blue-bright--}"
+magenta = "${--terminal-magenta-bright--}"
+cyan = "${--terminal-cyan-bright--}"
+white = "${--terminal-white-bright--}"
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[font]
+size = 16
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "BoldItalic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "MediumItalic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Medium"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = false
+
+[window]
+opacity = 0.92
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding]
+x = 9
+y = 9

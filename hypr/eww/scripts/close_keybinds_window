@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+./scripts/self close keybinds || ./scripts/self close keybinds-fullscreen

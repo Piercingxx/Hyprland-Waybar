@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+self_path="$HOME/.config/hypr/eww/scripts/self"
+
+$self_path close $1 > /dev/null 2>&1 || $self_path open $1 > /dev/null 2>&1
