@@ -12,7 +12,6 @@ sudo pacman -Syu git --noconfirm
 
 git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -si --noconfirm && cd ..
 
-  
 
 # Install necessary packages using Paru
 
@@ -26,3 +25,11 @@ unzip "${nerd_font}.zip"
 rm OFL.txt
 rm readme.md
 rm "${nerd_font}.zip"
+
+
+# Install YaY
+sudo pacman -S --needed base-devel git
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+b
