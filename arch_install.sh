@@ -11,7 +11,7 @@ git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -si -
 # Install YaY
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si --nocinfirm && cd ..
+makepkg -si --noconfirm && cd ..
 
 # Install necessary packages using Paru
 paru -Syu cliphist hyprland waybar alacritty rofi-wayland swww libnotify notification-daemon swaync networkmanager network-manager-applet bluez bluez-utils blueman papirus-icon-theme noto-fonts-emoji fonts-firacode fonts-font-awesome fonts-noto fonts-noto-cjk fonts-noto-color-emoji lxsession brightnessctl light nwg-look yad sox mint-themes xcursor-simp1e-gruvbox-light hyprlock hypridle hyprpicker qt5-wayland eww xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-hyprland --noconfirm
