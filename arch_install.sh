@@ -1,6 +1,8 @@
 #!/bin/bash
 
-  
+sudo systemctl start bluetooth
+systemctl enable bluetooth
+
 
 # Update system and install Git
 sudo pacman -Syu git --noconfirm
