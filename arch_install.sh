@@ -1,8 +1,14 @@
 #!/bin/bash
 
+
+# Enable Bluetooth
 sudo systemctl start bluetooth
 systemctl enable bluetooth
 
+# Enable Printer 
+sudo pacman -S cups -y
+systemctl enable cups.service
+systemctl start cups
 
 # Update system and install Git
 sudo pacman -Syu git --noconfirm
