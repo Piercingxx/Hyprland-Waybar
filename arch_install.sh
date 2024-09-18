@@ -6,7 +6,7 @@ sudo systemctl start bluetooth
 systemctl enable bluetooth
 
 # Enable Printer 
-sudo pacman -S cups -y
+sudo pacman -S cups gutenprint cups-pdf gtk3-print-backends nmap net-tools -y
 systemctl enable cups.service
 systemctl start cups
 
