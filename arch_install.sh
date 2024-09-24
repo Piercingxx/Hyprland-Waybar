@@ -23,46 +23,45 @@ makepkg -si --noconfirm && cd ..
 
 # Install necessary packages using Paru
 paru -Syu 
-paru -S cliphist 
-hyprland 
-hyprpaper 
-hyprshot
-hyprlock 
-hypridle 
-hyprpicker 
-waybar 
-alacritty 
-rofi-wayland 
-swww 
-libnotify 
-notification-daemon 
-swaync 
-networkmanager 
-network-manager-applet 
-bluez 
-bluez-utils 
-blueman 
-papirus-icon-theme 
-noto-fonts-emoji 
-fonts-firacode 
-fonts-font-awesome 
-fonts-noto 
-fonts-noto-cjk 
-fonts-noto-color-emoji 
-lxsession 
-brightnessctl 
-light 
-nwg-look 
-yad 
-sox 
-mint-themes 
-xcursor-simp1e-gruvbox-light 
-qt5-wayland 
-eww 
-xdg-desktop-portal 
-xdg-desktop-portal-gtk 
-xdg-desktop-portal-hyprland --noconfirm
-
+paru -S cliphist --noconfirm
+paru -S hyprland --noconfirm
+paru -S hyprpaper --noconfirm
+paru -S hyprshot --noconfirm
+paru -S hyprlock --noconfirm
+paru -S hypridle --noconfirm
+paru -S hyprpicke --noconfirm
+paru -S waybar --noconfirm
+paru -S alacritty --noconfirm
+paru -S rofi-wayl --noconfirm
+paru -S swww --noconfirm
+paru -S libnotify --noconfirm
+paru -S notificat --noconfirm
+paru -S swaync --noconfirm
+paru -S networkma --noconfirm
+paru -S network-m --noconfirm
+paru -S bluez --noconfirm
+paru -S bluez-uti --noconfirm
+paru -S blueman --noconfirm
+paru -S papirus-i --noconfirm
+paru -S noto-font --noconfirm
+paru -S fonts-fir --noconfirm
+paru -S fonts-fon --noconfirm
+paru -S fonts-not --noconfirm
+paru -S fonts-not --noconfirm
+paru -S fonts-not --noconfirm
+paru -S lxsession --noconfirm
+paru -S brightnessctl --noconfirm
+paru -S light --noconfirm
+paru -S nwg-look --noconfirm
+paru -S yad --noconfirm
+paru -S sox --noconfirm
+paru -S mint-themes --noconfirm
+paru -S xcursor-simp1e-gruvbox-light --noconfirm
+paru -S qt5-wayland --noconfirm
+paru -S eww --noconfirm
+paru -S xdg-desktop-portal --noconfirm
+paru -S xdg-desktop-portal-gtk --noconfirm
+paru -S xdg-desktop-portal-hyprland --noconfirm
 
 
 mkdir -p $HOME/.fonts
