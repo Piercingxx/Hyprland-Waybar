@@ -31,7 +31,7 @@ paru -S hyprlock --noconfirm
 paru -S hypridle --noconfirm
 paru -S hyprpicke --noconfirm
 paru -S waybar --noconfirm
-paru -S alacritty --noconfirm
+paru -S wl-gammarelay --noconfirm
 paru -S rofi-wayl --noconfirm
 paru -S swww --noconfirm
 paru -S libnotify --noconfirm
