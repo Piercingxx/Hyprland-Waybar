@@ -74,6 +74,8 @@ paru -S nautilus-open-any-terminal --noconfirm
 paru -S code-nautilus-git --noconfirm
 paru -S gimp-devel --noconfirm
 paru -S vesktop --noconfirm
+paru -S pamixer --noconfirm
+paru -S pavucontrol --noconfirm
 
 
 
