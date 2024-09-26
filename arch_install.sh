@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pacman -Syu steam
+pacman -Syu
 pacman -S zip unzip gzip tar make --noconfirm 
 
 
@@ -86,6 +86,7 @@ flatpak install flathub org.libreoffice.LibreOffice -y
 flatpak install flathub org.gnome.SimpleScan -y
 flatpak install flathub org.blender.Blender -y
 flatpak install flathub io.missioncenter.MissionCenter -y
+flatpak install flathub com.valvesoftware.Steam -y
 
 
 
