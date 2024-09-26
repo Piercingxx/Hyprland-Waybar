@@ -99,8 +99,21 @@
 
 
 
+
+"custom/power": {
+        "format" : "⏻ ",
+        "on-click": "~/.config/rofi/scripts/power_menu.sh",
+        "tooltip": false,
+    },
+
+
+
+
+
+
+
     
-    "custom/power": {
+    "custom/power#1": {
         "format" : "⏻ ",
 		"tooltip": false,
 		"menu": "on-click",
