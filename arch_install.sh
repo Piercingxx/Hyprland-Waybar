@@ -1,5 +1,8 @@
 #!/bin/bash
 
+pacman -Syu
+pacman -S zip unzip gzip tar make --noconfirm 
+
 
 # Enable Bluetooth
 sudo systemctl start bluetooth
@@ -66,6 +69,22 @@ paru -S awesome-terminal-fonts --noconfirm
 paru -S ttf-ms-fonts --noconfirm
 paru -S terminus-font-ttf --noconfirm
 paru -S noto-color-emoji-fontconfig-no-binding --noconfirm
+paru -S nautilus-renamer --noconfirm
+paru -S nautilus-open-any-terminal --noconfirm
+paru -S code-nautilus-git --noconfirm
+paru -S gimp-devel --noconfirm
+paru -S vesktop --noconfirm
+
+
+
+flatpak install flathub com.google.Chrome -y
+flatpak install flathub md.obsidian.Obsidian -y
+flatpak install flathub com.dropbox.Client -y
+flatpak install flathub org.libreoffice.LibreOffice -y
+flatpak install flathub org.gnome.SimpleScan -y
+flatpak install flathub org.blender.Blender -y
+flatpak install flathub io.missioncenter.MissionCenter -y
+
 
 
 mkdir -p $HOME/.fonts
