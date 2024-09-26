@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pacman -Syu
+pacman -Syu steam
 pacman -S zip unzip gzip tar make --noconfirm 
 
 
