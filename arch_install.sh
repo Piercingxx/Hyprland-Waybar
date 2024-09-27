@@ -1,231 +1,281 @@
-#!/bin/bash
 
-pacman -Syu
-pacman -S zip unzip gzip tar make --noconfirm 
+################
+### MONITORS ###
+################
+#Laptop
+# monitor=eDP-1,highres,auto,1.5
 
-
-# Enable Bluetooth
-sudo systemctl start bluetooth
-systemctl enable bluetooth
-
-# Enable Printer 
-sudo pacman -S cups gutenprint cups-pdf gtk3-print-backends nmap net-tools -y
-systemctl enable cups.service
-systemctl start cups
-
-# Update system and install Git
-sudo pacman -Syu git --noconfirm
-
-# Clone and install Paru
-git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -si --noconfirm && cd ..
-
-# Install YaY
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si --noconfirm && cd ..
-
-
-# First round of installs
-yay -S hyprshot --noconfirm
-yay -S eww --noconfirm
-yay -S rofi --noconfirm
-yay -S dconf --noconfirm
-
-
-# Install necessary packages using Paru
-paru -Syu 
-paru -S cliphist --noconfirm
-paru -S hyprland --noconfirm
-paru -S hyprpaper --noconfirm
-paru -S hyprlock --noconfirm
-paru -S hypridle --noconfirm
-paru -S hyprpicker --noconfirm
-paru -S waybar --noconfirm
-paru -S wl-gammarelay --noconfirm
-paru -S swww --noconfirm
-paru -S libnotify --noconfirm
-paru -S notification-daemon --noconfirm
-paru -S swaync --noconfirm
-paru -S networkmanager --noconfirm
-paru -S network-manager-applet --noconfirm
-paru -S bluez --noconfirm
-paru -S bluez-uti --noconfirm
-paru -S blueman --noconfirm
-paru -S lxsession --noconfirm
-paru -S brightnessctl --noconfirm
-paru -S light --noconfirm
-paru -S nwg-look --noconfirm
-paru -S yad --noconfirm
-paru -S sox --noconfirm
-paru -S mint-themes --noconfirm
-paru -S xcursor-simp1e-gruvbox-light --noconfirm
-paru -S qt5-wayland --noconfirm
-paru -S xdg-desktop-portal --noconfirm
-paru -S xdg-desktop-portal-gtk --noconfirm
-paru -S xdg-desktop-portal-hyprland --noconfirm
-paru -S papirus-icon-theme --noconfirm
-paru -S ttf-firacode --noconfirm
-paru -S awesome-terminal-fonts --noconfirm
-paru -S ttf-ms-fonts --noconfirm
-paru -S terminus-font-ttf --noconfirm
-paru -S noto-color-emoji-fontconfig-no-binding --noconfirm
-paru -S nautilus-renamer --noconfirm
-paru -S nautilus-open-any-terminal --noconfirm
-paru -S code-nautilus-git --noconfirm
-paru -S gimp-devel --noconfirm
-paru -S vesktop --noconfirm
-paru -S pamixer --noconfirm
-paru -S pavucontrol --noconfirm
+#Desktop
+monitor=DP-1, 3840x1600@75, 0x1600, 1
+monitor=DP-2, 3840x1600@75, 0x0, 1
 
 
 
-flatpak install flathub com.google.Chrome -y
-flatpak install flathub md.obsidian.Obsidian -y
-flatpak install flathub com.dropbox.Client -y
-flatpak install flathub org.libreoffice.LibreOffice -y
-flatpak install flathub org.gnome.SimpleScan -y
-flatpak install flathub org.blender.Blender -y
-flatpak install flathub io.missioncenter.MissionCenter -y
-flatpak install flathub com.valvesoftware.Steam -y
+
+###################
+### MY PROGRAMS ###
+###################
+$terminal = kitty
+$fileManager = nautilus
+$menu = rofi -show drun
 
 
 
-mkdir -p $HOME/.fonts
-cd $HOME/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
-unzip FiraCode.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
-unzip Meslo.zip
-rm Firacode.zip
-rm Meslo.zip
+
+#################
+### AUTOSTART ###
+#################
+exec-once = hyprpaper & waybar & nm-applet 
+exec-once = synology-drive autostart
+exec-once = xdg-user-dirs-update
 
 
 
-# Customizations 
-### These will effect your Gnome GUI as well some Hyprland settings
-##### Do not run these unless you know what they are for.
 
 
-gsettings set org.gnome.desktop.interface clock-format 24h && echo "Clock Format: 24h"
-gsettings set org.gnome.desktop.interface clock-show-weekday true && echo "Clock Show Weekday: True"
-gsettings set org.gnome.desktop.peripherals.keyboard numlock-state true && echo "Numlock State: True"
-gsettings set org.gnome.desktop.input-sources xkb-options "['caps:backspace']" && echo "Caps Lock: Backspace"
-gsettings set org.gnome.desktop.peripherals.mouse.speed "0.11790393013100431"
-gsettings set org.gnome.desktop.peripherals.mouse.accel-profile "'flat'"
-gsettings set org.gnome.desktop.interface color-scheme prefer-dark && echo "Color Scheme: Dark"
-gsettings set org.gnome.desktop.session idle-delay 0 && echo "Lock Screen Idle: 20"
-gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing' && echo "Sleep Inactive AC: Nothing"
-gsettings set org.gnome.desktop.interface show-battery-percentage true && echo "Show Battery Percentage: True"
-gsettings set org.gnome.settings-daemon.plugins.power ambient-enabled false && echo "Ambient Enabled: False"
-gsettings set org.gnome.settings-daemon.plugins.power idle-delay "unit32 900" && echo "Idle Delay: 15 minutes"
-gsettings set org.gnome.desktop.interface enable-hot-corners false && echo "Enable Hot Corners: False"
-gsettings set org.gnome.desktop.background picture-options 'spanned' && echo "Background Options: Spanned"
-gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true && echo "Night Light Enabled: True"
-gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-automatic false && echo "Night Light Schedule Automatic: False"
-gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-from 20 && echo "Night Light Schedule From: 20"
-gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-to 04 && echo "Night Light Schedule To: 04"
-gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 2500 && echo "Night Light Temperature: 2500"
-gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']" && echo "Custom Keybindings: None"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ name "kitty" && echo "Kitty: Name"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ command "kitty" && echo "Kitty: Command"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ binding "<Super>W" && echo "Kitty: Binding"
-gsettings set org.gnome.desktop.wm.keybindings close "['<Super>Q']" && echo "Super Q to Close"
-gsettings set org.gnome.mutter.wayland.keybindings.restore-shortcuts "['']" 
-gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true && echo "Tap to Click: True"
-gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true && echo "Natural Scroll: True"
-gsettings set org.gnome.desktop.peripherals.touchpad edge-scrolling-enabled true && echo "Edge Scrolling: True"
-gsettings set org.gnome.desktop.peripherals.touchpad two-finger-scrolling-enabled false && echo "Two Finger Scrolling: False"
-gsettings set org.gnome.desktop.peripherals.touchpad click-method 'areas' && echo "Click Method: Areas"
-gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'interactive' && echo "Power Button Action: Interactive"
-gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark && echo "GTK Theme: Adwaita-dark"
-gsettings set org.gnome.desktop.interface cursor-theme 'Nordzy-cursors' && echo "Cursor Theme: Nordzy"
-gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark' && echo "Icon Theme: Papirus-Dark"
-gsettings set org.gnome.shell favorite-apps "['com.google.Chrome.desktop', 'org.gnome.Nautilus.desktop', 'org.libreoffice.LibreOffice.writer.desktop', 'org.gnome.Calculator.desktop', 'md.obsidian.Obsidian.desktop', 'com.visualstudio.code.desktop', 'code.desktop', 'synochat.desktop', 'org.gimp.GIMP.desktop', 'org.blender.Blender.desktop']" && echo "Favorite Apps: Chrome, Nautilus, LibreOffice, Calculator, Obsidian, VSCode, Discord, Gimp"
-gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal kitty
-gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
-gsettings set com.github.stunkymonkey.nautilus-open-any-terminal flatpak system
-gnome-extensions enable ubuntu-appindicators@ubuntu.com && echo "App Indicator: Enabled"
-gnome-extensions enable gsconnect@andyholmes.github.io && echo "GSConnect: Enabled"
-gnome-extensions enable awesome-tiles@velitasali.com && echo "Awesome Tiles: Enabled"
-gnome-extensions enable aztaskbar@aztaskbar.gitlab.com && echo "AzTaskbar: Enabled"
-gnome-extensions enable blur-my-shell@aunetx && echo "Blur My Shell: Enabled"
-gnome-extensions enable caffeine@patapon.info && echo "Caffeine: Enabled"
-gnome-extensions enable openbar@openbar.github.io && echo "OpenBar: Enabled"
-gnome-extensions enable just-perfection-desktop@just-perfection && echo "Just Perfection: Enabled"
-dconf write /org/gnome/shell/extensions/just-perfection/dash-icon-size "48" && echo "Just Perfection Dash Icon Size: 48"
-dconf write /org/gnome/shell/extensions/just-perfection/animation "3" && echo "Just Perfection Animation: 3"
-dconf write /org/gnome/shell/extensions/just-perfection/startup-status "0" && echo "Just Perfection Startup Status: 0"
-dconf write /org/gnome/shell/extensions/just-perfection/app-menu-icon "false" && echo "Just Perfection App Menu Icon: False"
-dconf write /org/gnome/shell/extensions/just-perfection/activities-button "false" && echo "Just Perfection Activities Button: False"
-dconf write /org/gnome/shell/extensions/just-perfection/app-menu "false" && echo "Just Perfection App Menu: False"
-dconf write /org/gnome/shell/extensions/just-perfection/app-menu-label "false" && echo "Just Perfection App Menu Label: False"
-dconf write /org/gnome/shell/extensions/just-perfection/search "false" && echo "Just Perfection Search: False"
-dconf write /org/gnome/shell/extensions/just-perfection/theme "true" && echo "Just Perfection Theme: True"
-dconf write /org/gnome/shell/extensions/caffeine/duration-timer "4" && echo "Caffeine Duration Timer: 4"
-dconf write /org/gnome/shell/extensions/awesome-tiles/gap-size-increments "1" && echo "Awesome Tiles Gap Size Increments: 1"
-dconf write /org/gnome/shell/extensions/aztaskbar/favorites "false" && echo "AzTaskbar Favorites: False"
-dconf write /org/gnome/shell/extensions/aztaskbar/main-panel-height "33" && echo "AzTaskbar Main Panel Height: 33"
-dconf write /org/gnome/shell/extensions/aztaskbar/panel-on-all-monitors "false"
-dconf write /org/gnome/shell/extensions/aztaskbar/show-panel-activities-button "false" && echo "AzTaskbar Show Panel Activities Button: False"
-dconf write /org/gnome/shell/extensions/aztaskbar/icon-size "23" && echo "AzTaskbar Icon Size: 23"
-dconf write /org/gnome/shell/extensions/blur-my-shell/brightness "1.0" && echo "Blur My Shell Brightness: 1.0"
-dconf write /org/gnome/shell/extensions/openbar/bg-opacity '0.8'
-dconf write /org/gnome/shell/extensions/openbar/prominent1 "['49', '60', '43']"
-dconf write /org/gnome/shell/extensions/openbar/prominent2 "['196', '216', '182']"
-dconf write /org/gnome/shell/extensions/openbar/prominent3 "['105', '138', '96']"
-dconf write /org/gnome/shell/extensions/openbar/prominent4 "['142', '181', '127']"
-dconf write /org/gnome/shell/extensions/openbar/prominent5 "['113', '108', '101']"
-dconf write /org/gnome/shell/extensions/openbar/prominent6 "['137', '155', '163']"
-dconf write /org/gnome/shell/extensions/openbar/palette1 "['105', '138', '96']"
-dconf write /org/gnome/shell/extensions/openbar/bg-change "true"
-dconf write /org/gnome/shell/extensions/openbar/palette10 "['50', '75', '40']"
-dconf write /org/gnome/shell/extensions/openbar/palette11 "['61', '68', '72']"
-dconf write /org/gnome/shell/extensions/openbar/palette12 "['164', '140', '123']"
-dconf write /org/gnome/shell/extensions/openbar/palette2 "['196', '216', '182']"
-dconf write /org/gnome/shell/extensions/openbar/palette3 "['33', '36', '29']"
-dconf write /org/gnome/shell/extensions/openbar/palette4 "['142', '181', '127']"
-dconf write /org/gnome/shell/extensions/openbar/palette5 "['71', '102', '61']"
-dconf write /org/gnome/shell/extensions/openbar/palette6 "['113', '108', '101']"
-dconf write /org/gnome/shell/extensions/openbar/palette7 "['137', '155', '163']"
-dconf write /org/gnome/shell/extensions/openbar/palette8 "['89', '102', '105']"
-dconf write /org/gnome/shell/extensions/openbar/palette9 "['81', '76', '71']"
-dconf write /org/gnome/shell/extensions/openbar/default-font "'Sans 12'"
-dconf write /org/gnome/shell/extensions/openbar/height "33.0"
-dconf write /org/gnome/shell/extensions/openbar/margin "5.0"
-dconf write /org/gnome/shell/extensions/openbar/margin-wmax "2.3"
-dconf write /org/gnome/shell/extensions/openbar/dark-bgcolor "'0.2392157018184662', '0.21568627655506134', '0.3686274588108063']"
-dconf write /org/gnome/shell/extensions/openbar/fgcolor "['0.6352940797805786', '0.46666669845581055', '1']"
-dconf write /org/gnome/shell/extensions/openbar/font "'FiraCode Nerd Font Mono 11'"
-dconf write /org/gnome/shell/extensions/openbar/isalpha "0.0"
-dconf write /org/gnome/shell/extensions/openbar/bgcolor2 "['0.9647058844566345', '0.5803921818733215', '1']"
-dconf write /org/gnome/shell/extensions/openbar/candyalpha "0.3"
-dconf write /org/gnome/shell/extensions/openbar/shalpha "0.0"
-dconf write /org/gnome/shell/extensions/openbar/hcolor "['0.6352940797805786', '0.46666669845581055', '1']"
-dconf write /org/gnome/shell/extensions/openbar/halpha "0.0"
-dconf write /org/gnome/shell/extensions/openbar/heffect "true"
-dconf write /org/gnome/shell/extensions/openbar/reloadstyle "true"
-dconf write /org/gnome/shell/extensions/openbar/hpad "0.0"
-dconf write /org/gnome/shell/extensions/openbar/vpad "0.0"
-dconf write /org/gnome/shell/extensions/openbar/bcolor "['0.3803921937942505', '1', '0.7921568751335144']"
-dconf write /org/gnome/shell/extensions/openbar/autofg-menu "true"
-dconf write /org/gnome/shell/extensions/openbar/mfgcolor "['0.9647058844566345', '0.5803921818733215', '1']"
-dconf write /org/gnome/shell/extensions/openbar/mbgcolor "['0.2392157018184662', '0.21568627655506134', '0.3686274588108063']"
-dconf write /org/gnome/shell/extensions/openbar/smbgcolor "['0.6352940797805786', '0.46666669845581055', '1']"
-dconf write /org/gnome/shell/extensions/openbar/mbcolor "['0.3803921937942505', '1', '0.7921568751335144']"
-dconf write /org/gnome/shell/extensions/openbar/mhcolor "['0.9647058844566345', '0.5803921818733215', '1']"
-dconf write /org/gnome/shell/extensions/openbar/mscolor "['0.3803921937942505', '1', '0.7921568751335144']"
-dconf write /org/gnome/shell/extensions/openbar/mshcolor "['0.2392157018184662', '0.21568627655506134', '0.3686274588108063']"
-dconf write /org/gnome/shell/extensions/openbar/reloadstyle "false"
-dconf write /org/gnome/shell/extensions/openbar/extend-menu-shell "true"
-dconf write /org/gnome/shell/extensions/openbar/trigger-reload "false"
-dconf write /org/gnome/shell/extensions/openbar/reloadstyle "true"
-dconf write /gnome/shell/extensions/openbar/dashdock-style "'Bar'"
-dconf write /org/gnome/shell/extensions/aztaskbar/indicator-color-focused "'rgb(246,148,255)'"
-dconf write /org/gnome/shell/extensions/aztaskbar/indicator-color-running "'rgb(130,226,255)'"
-dconf write /org/gnome/desktop/interface/font-name 'MesloLGSDZ Nerd Font 11'
-dconf write /org/gnome/desktop/interface/document-font-name 'FiraCode Nerd Font 11'
-dconf write /org/gnome/desktop/interface/monospace-font-name 'Terminus (TTF) Medium 12'
-dconf write /org/gnome/desktop/wm/preferences/button-layout 'appmenu:minimize,close'
-dconf write /org/gnome/desktop/wm/preferences/button-layout 'appmenu:close'
+#############################
+### ENVIRONMENT VARIABLES ###
+#############################
+env = XCURSOR_SIZE,20
+env = XDG_CURRENT_DESKTOP, Hyprland
+env = XDG_SESSION_TYPE, wayland
+env = XDG_SESSION_DESKTOP, Hyprland
 
 
+
+
+
+#####################
+### LOOK AND FEEL ###
+#####################
+general { 
+    gaps_in = 20
+    gaps_out = 35
+    border_size = 2
+    col.active_border = rgba(a277ffff) rgba(ff6767ff) rgba(61ffcaff) rgba(ffca85ff) rgba(f694ffff) rgba(82e2ffff) 90deg
+    col.inactive_border = transparent
+    resize_on_border = true 
+    allow_tearing = false
+    layout = dwindle
+}
+
+animations {
+    enabled = true
+    bezier = myBezier, 0.0, 0.0, 1.0, 1.0
+    animation = windows, 1, 5, default, slide
+    animation = border, 1, 5, default
+    animation = borderangle, 1, 90, myBezier, loop
+    animation = workspaces, 1, 5, default, slide
+}
+
+dwindle {
+    # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
+    pseudotile = true # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+    preserve_split = true
+    smart_split = true
+    force_split = 0
+}
+
+
+gestures {
+    # See https://wiki.hyprland.org/Configuring/Variables/ for more
+    workspace_swipe = on
+}
+
+decoration {
+    # See https://wiki.hyprland.org/Configuring/Variables/ for more
+    rounding = 10
+    dim_special = 0.0
+    drop_shadow = no
+    shadow_range = 4
+    shadow_render_power = 3
+    col.shadow = rgba(1a1a1aee)
+}
+
+
+
+
+
+
+
+
+#############
+### INPUT ###
+#############
+
+# https://wiki.hyprland.org/Configuring/Variables/#input
+input {
+    kb_layout = us
+    kb_variant =
+    kb_model =
+    kb_options = caps:backspace
+    kb_rules =
+        special_fallthrough = true
+        follow_mouse = 1
+        sensitivity = 0
+    numlock_by_default = true
+    touchpad {
+        natural_scroll = true
+        disable_while_typing = true
+
+    }
+}
+
+
+# https://wiki.hyprland.org/Configuring/Variables/#gestures
+gestures {
+    workspace_swipe = true
+    workspace_swipe_touch = true
+    workspace_swipe_create_new = true
+}
+
+# Example per-device config
+# See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more
+device {
+#    name = kingston-trackball
+#    sensitivity = +0.5
+}
+
+
+
+
+
+
+
+####################
+### WINDOW RULES ###
+####################
+
+windowrule = float, title:^(Picture-in-Picture)$
+windowrule = float, title:^(Picture in picture)$
+windowrule = size 30% 30%, title:^(Picture-in-Picture)$
+windowrule = size 30% 30%, title:^(Picture in picture)$
+windowrule = move 69.9% 69.9%, title:^(Picture-in-Picture)$
+windowrule = move 69.9% 69.9%, title:^(Picture in picture)$
+windowrule = float, title:(Blender)
+windowrule = float, title:(Calculator)
+windowrule = float, title:(Steam)
+windowrule = float, title:(SynoChat)
+
+
+
+
+
+
+##############################
+### WINDOWS AND WORKSPACES ###
+##############################
+
+windowrulev2 = suppressevent maximize, class:.* # You'll probably like this.
+
+
+
+
+####################
+### KEYBINDINGSS ###
+####################
+$mainMod = SUPER
+
+# Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
+bind = $mainMod, Q, killactive
+bind = $mainMod SHIFT, Q, exit
+bind = $mainMod, W, exec, $terminal
+bind = $mainMod, SPACE, exec, $menu
+bind = $mainMod, L, exec, hyprlock
+bind = ALT, TAB, exec, rofi -show window
+bind = $mainMod, RETURN, exec, $fileManager
+bind = $mainMod, PRINT, exec, grim -o HDMI-A-2 ~/Pictures/Screenshots/$(date +'%s.png') && nautilus ~/Pictures/Screenshots
+bind = $mainMod, F, togglefloating
+bind = $mainMod SHIFT, F, fullscreen, 
+bind = $mainMod, R, exec, pkill waybar && waybar &
+
+bind = $mainMod, S, exec, yad --html < ~/.config/hypr/keybindings.md --button=OK:0
+
+# Screenshot a region
+bind = , PRINT, exec, hyprshot -m region
+# Screenshot a window
+bind = $shiftMod, PRINT, exec, hyprshot -m window
+# Screenshot a monitor
+bind = $mainMod, PRINT, exec, hyprshot -m output
+
+
+
+# Move focus with mainMod + arrow keys
+bind = $mainMod, left, movefocus, l
+bind = $mainMod, right, movefocus, r
+bind = $mainMod, up, movefocus, u
+bind = $mainMod, down, movefocus, d
+
+# Move focus with mainMod + vim keys
+bind = $mainMod, H, movefocus, l
+bind = $mainMod, L, movefocus, r
+bind = $mainMod, K, movefocus, u
+bind = $mainMod, J, movefocus, d
+
+# Move window with mainMod + arrow keys
+bind = $mainMod SHIFT, left, movewindow, l
+bind = $mainMod SHIFT, right, movewindow, r
+bind = $mainMod SHIFT, up, movewindow, u
+bind = $mainMod SHIFT, down, movewindow, d
+
+# Move window with mainMod + vim keys
+bind = $mainMod SHIFT, H, movewindow, l
+bind = $mainMod SHIFT, L, movewindow, r
+bind = $mainMod SHIFT, K, movewindow, u
+bind = $mainMod SHIFT, J, movewindow, d
+
+# Resize Window with mainMod + vim keys
+bindm = $mainMod, mouse:273, resizewindow
+bind = $mainMod ALT, left, resizeactive, -100 0
+bind = $mainMod ALT, right, resizeactive, 100 0
+bind = $mainMod ALT, up, resizeactive, 0, -100
+bind = $mainMod ALT, down, resizeactive, 0, 100
+
+# Resize Window with mainMod + vim keys
+bindm = $mainMod, mouse:273, resizewindow
+bind = $mainMod ALT, H, resizeactive, -100 0
+bind = $mainMod ALT, L, resizeactive, 100 0
+bind = $mainMod ALT, K, resizeactive, 0, -100
+bind = $mainMod ALT, J, resizeactive, 0, 100
+
+# Switch workspaces with mainMod + [0-9]
+bind = $mainMod, 1, workspace, 1
+bind = $mainMod, 2, workspace, 2
+bind = $mainMod, 3, workspace, 3
+bind = $mainMod, 4, workspace, 4
+bind = $mainMod, 5, workspace, 5
+bind = $mainMod, 6, workspace, 6
+bind = $mainMod, 7, workspace, 7
+bind = $mainMod, 8, workspace, 8
+bind = $mainMod, 9, workspace, 9
+bind = $mainMod, 0, workspace, 10
+
+# Move active window to a workspace with mainMod + SHIFT + [0-9]
+bind = $mainMod SHIFT, 1, movetoworkspace, 1
+bind = $mainMod SHIFT, 2, movetoworkspace, 2
+bind = $mainMod SHIFT, 3, movetoworkspace, 3
+bind = $mainMod SHIFT, 4, movetoworkspace, 4
+bind = $mainMod SHIFT, 5, movetoworkspace, 5
+bind = $mainMod SHIFT, 6, movetoworkspace, 6
+bind = $mainMod SHIFT, 7, movetoworkspace, 7
+bind = $mainMod SHIFT, 8, movetoworkspace, 8
+bind = $mainMod SHIFT, 9, movetoworkspace, 9
+bind = $mainMod SHIFT, 0, movetoworkspace, 10
+
+# Scroll through existing workspaces with mainMod + scroll
+bind = $mainMod, mouse_down, workspace, e+1
+bind = $mainMod, mouse_up, workspace, e-1
+
+# Media control
+bind = , XF86AudioPlay, exec, playerctl play-pause
+bind = , XF86AudioPause, exec, playerctl play-pause
+bind = , XF86AudioNext, exec, playerctl next
+bind = , XF86AudioPrev, exec, playerctl previous
+bind = , XF86AudioRaiseVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +5%
+bind = , XF86AudioLowerVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -5%
+bind = , XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle
+bind = , XF86AudioMicMute, exec, pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+# Brightness control
+bind = ,XF86MonBrightnessUp, exec, brightnessctl set 10%+
+bind = ,XF86MonBrightnessDown, exec, brightnessctl set 10%-
