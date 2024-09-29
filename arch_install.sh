@@ -101,8 +101,7 @@ rm Meslo.zip
 
 
 
-hyprpm add https://github.com/virtcode/hypr-dynamic-cursors
-hyprpm enable dynamic-cursors
+
 
 
 # Customizations 
