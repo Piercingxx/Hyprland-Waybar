@@ -1,5 +1,11 @@
 {
     "layer": "top",
+    "position": "top",
+    "height": 20,
+    "margin-top": 5,
+    "margin-bottom": -20,
+    "margin-left": 10,
+    "margin-right": 5,
     "spacing": 4,
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
 
@@ -44,7 +50,6 @@
 },
 
 "pulseaudio": {
-    // "scroll-step": 1, // %, can be a float
     "format": "{volume}% {icon} {format_source}",
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
@@ -60,7 +65,8 @@
         "car": "",
         "default": ["", "", ""]
     },
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol -t 3",
+    "on-click-right": "XDG_CURRENT_DESKTOP='gnome' gnome-control-center",
 },
 
 
