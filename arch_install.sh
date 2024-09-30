@@ -13,6 +13,7 @@ sudo pacman -S cups gutenprint cups-pdf gtk3-print-backends nmap net-tools cmake
 systemctl enable cups.service
 systemctl start cups
 
+
 # Update system and install Git
 sudo pacman -Syu git --noconfirm
 
@@ -43,6 +44,11 @@ paru -S hyprpicker --noconfirm
 paru -S waybar --noconfirm
 paru -S wl-gammarelay --noconfirm
 paru -S swww --noconfirm
+paru -S pamixer --noconfirm
+paru -S pavucontrol --noconfirm
+paru -S wireplumber --noconfirm
+paru -S libdbusmenu-gtk3 --noconfirm
+paru -S playerctl --noconfirm
 paru -S libnotify --noconfirm
 paru -S notification-daemon --noconfirm
 paru -S swaync --noconfirm
@@ -74,8 +80,7 @@ paru -S nautilus-open-any-terminal --noconfirm
 paru -S code-nautilus-git --noconfirm
 paru -S gimp-devel --noconfirm
 paru -S vesktop --noconfirm
-paru -S pamixer --noconfirm
-paru -S pavucontrol --noconfirm
+
 
 
 
