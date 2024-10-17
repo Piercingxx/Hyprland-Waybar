@@ -82,6 +82,7 @@ paru -S gimp-devel --noconfirm
 paru -S vesktop --noconfirm
 paru -S synochat --noconfirm
 paru -S synology-drive --noconfirm
+paru -S visual-studio-code-bin --noconfirm
 flatpak install flathub com.google.Chrome -y
 flatpak install flathub md.obsidian.Obsidian -y
 flatpak install flathub com.dropbox.Client -y
