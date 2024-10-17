@@ -1,7 +1,7 @@
 #!/bin/bash
 
-pacman -Syu
-pacman -S zip unzip gzip tar make --noconfirm 
+sudo pacman -Syu
+sudo pacman -S zip unzip gzip tar make --noconfirm 
 
 
 # Enable Bluetooth
