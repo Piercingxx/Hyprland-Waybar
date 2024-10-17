@@ -105,15 +105,13 @@ rm Firacode.zip
 rm Meslo.zip
 
 
-
-
+#Synology Drive doesnt support wayland so run this..
+QT_QPA_PLATFORM=xcb
 
 
 # Customizations 
 ### These will effect your Gnome GUI as well some Hyprland settings
 ##### Do not run these unless you know what they are for.
-
-
 gsettings set org.gnome.desktop.interface clock-format 24h && echo "Clock Format: 24h"
 gsettings set org.gnome.desktop.interface clock-show-weekday true && echo "Clock Show Weekday: True"
 gsettings set org.gnome.desktop.peripherals.keyboard numlock-state true && echo "Numlock State: True"
