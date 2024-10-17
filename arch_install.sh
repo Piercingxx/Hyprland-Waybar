@@ -31,6 +31,7 @@ yay -S hyprshot --noconfirm
 yay -S eww --noconfirm
 yay -S rofi --noconfirm
 yay -S dconf --noconfirm
+yay -S nwg-displays --noconfirm
 
 
 # Install necessary packages using Paru
