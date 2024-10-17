@@ -80,10 +80,8 @@ paru -S nautilus-open-any-terminal --noconfirm
 paru -S code-nautilus-git --noconfirm
 paru -S gimp-devel --noconfirm
 paru -S vesktop --noconfirm
-
-
-
-
+paru -S synochat --noconfirm
+paru -S synology-drive --noconfirm
 flatpak install flathub com.google.Chrome -y
 flatpak install flathub md.obsidian.Obsidian -y
 flatpak install flathub com.dropbox.Client -y
