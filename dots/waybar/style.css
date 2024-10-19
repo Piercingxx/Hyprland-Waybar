@@ -1,22 +1,12 @@
-/*
- * __        __          _                  ____  _         _       
- * \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___  
- *  \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \ 
- *   \ V  V / (_| | |_| | |_) | (_| | |     ___) | |_| |_| | |  __/ 
- *    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    |____/ \__|\__, |_|\___| 
- *                 |___/                              |___/         
- *  
- * by Stephan Raabe (2024) 
- * ----------------------------------------------------- 
-*/
 
-@define-color backgroundlight #FFFFFF;
-@define-color backgrounddark #FFFFFF;
+
+@define-color backgroundlight transparent;
+@define-color backgrounddark transparent;
 @define-color workspacesbackground1 #FFFFFF;
-@define-color workspacesbackground2 #CCCCCC;
+@define-color workspacesbackground2 #a277ff;
 @define-color bordercolor #FFFFFF;
-@define-color textcolor1 #000000;
-@define-color textcolor2 #000000;
+@define-color textcolor1 #82e2ff;
+@define-color textcolor2 #FFFFFF;
 @define-color textcolor3 #FFFFFF;
 @define-color iconcolor #FFFFFF;
 
@@ -31,11 +21,15 @@
 }
 
 window#waybar {
-    background-color: rgba(0,0,0,0.2);
-    border-bottom: 0px solid #ffffff;
-    /* color: #FFFFFF; */
+    background-color: transparent;
+    border-bottom: 8px solid transparent;
+    color: #a277ff;
     transition-property: background-color;
     transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
 }
 
 /* -----------------------------------------------------
@@ -142,40 +136,22 @@ window#waybar.empty #window {
     margin-right: 0;
 }
 
+
 /* -----------------------------------------------------
- * Custom Quicklinks
+ * Clock
  * ----------------------------------------------------- */
 
-#custom-browser, 
-#custom-filemanager,
-#network,
-#pulseaudio,
-#battery,
-#custom-appmenu,
-#clock {
-    margin-right: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    color: @iconcolor;
-    padding: 4px 10px 2px 10px;
+ #clock {
+    background-color: @backgrounddark;
     font-size: 16px;
+    font-family: JetBrainsMono Nerd Font, monospace;
+    font-size: 18px;
+    font-weight: bold;
+    color: @textcolor3;
+    border-radius: 15px;
+    margin: 10px 7px 10px 0px;
 }
 
-#custom-quicklink1,
-#custom-quicklink2,
-#custom-quicklink3,
-#custom-quicklink4,
-#custom-quicklink5,
-#custom-quicklink6,
-#custom-quicklink7,
-#custom-quicklink8,
-#custom-quicklink9,
-#custom-quicklink10 {
-    padding:0px;
-    margin-right: 7px;
-    font-size:20px;
-    color: @iconcolor;
-}
 
 /* -----------------------------------------------------
  * Custom Modules
@@ -214,17 +190,6 @@ window#waybar.empty #window {
     margin-right:10px;
 }
 
-/* -----------------------------------------------------
- * Clock
- * ----------------------------------------------------- */
-
-#clock {
-    background-color: @backgrounddark;
-    font-size: 16px;
-    color: @textcolor1;
-    border-radius: 15px;
-    margin: 10px 7px 10px 0px;
-}
 
 /* -----------------------------------------------------
  * Pulseaudio
@@ -248,7 +213,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #network {
-    background-color: @backgroundlight;
+    background-color: @backgrounddark;
     font-size: 16px;
     color: @textcolor2;
     border-radius: 15px;
@@ -256,13 +221,13 @@ window#waybar.empty #window {
 }
 
 #network.ethernet {
-    background-color: @backgroundlight;
-    color: @textcolor2;
+    background-color: @backgrounddark;
+    color: @textcolor3;
 }
 
 #network.wifi {
-    background-color: @backgroundlight;
-    color: @textcolor2;
+    background-color: @backgrounddark;
+    color: @textcolor3;
 }
 
 /* -----------------------------------------------------

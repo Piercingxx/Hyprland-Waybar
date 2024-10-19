@@ -35,8 +35,10 @@ yay -S nwg-displays --noconfirm
 yay -S wlogout --noconfirm
 
 
+
 # Install necessary packages using Paru
 paru -Syu 
+paru -S swaync --noconfirm
 paru -S cliphist --noconfirm
 paru -S hyprland --noconfirm
 paru -S hyprpaper --noconfirm
