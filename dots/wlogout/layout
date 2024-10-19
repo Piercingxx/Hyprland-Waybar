@@ -12,7 +12,7 @@
 }
 {
     "label" : "shutdown",
-    "action" : "poweroff",
+    "action" : "shutdown -h now",
     "text" : "Shutdown",
     "keybind" : "s"
 }
