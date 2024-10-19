@@ -22,6 +22,7 @@
         "mpd", 
         "pulseaudio",
         "keyboard-state", 
+        "bluetooth",
         "battery", 
         "tray",
         "custom/exit"
