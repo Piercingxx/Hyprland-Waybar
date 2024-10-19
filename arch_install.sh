@@ -32,6 +32,7 @@ yay -S eww --noconfirm
 yay -S rofi --noconfirm
 yay -S dconf --noconfirm
 yay -S nwg-displays --noconfirm
+yay -S wlogout --noconfirm
 
 
 # Install necessary packages using Paru
