@@ -99,6 +99,10 @@ flatpak install flathub io.missioncenter.MissionCenter -y
 flatpak install flathub com.valvesoftware.Steam -y
 
 
+# Dynamic Cursor
+hyprpm add https://github.com/virtcode/hypr-dynamic-cursors
+hyprpm enable dynamic-cursors
+
 
 mkdir -p $HOME/.fonts
 cd $HOME/.fonts
