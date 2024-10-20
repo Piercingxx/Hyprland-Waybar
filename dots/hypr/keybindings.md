@@ -1,14 +1,11 @@
-<!DOCTYPE html> 
-<html> 
 
-<head> 
-    <title>PiercingXX'S KEYBINDINGS </title> 
-</head> 
 
-<body> 
-    <h2>General</h2> 
+## PiercingXX'S KEYBINDINGS 
+-----------------------------------------------------------------
 
-    <p>
+#### General  
+-----------------------------------------------------------------
+
 bind = $mainMod, Q, killactive
 bind = $mainMod SHIFT, Q, exit
 bind = $mainMod, W, exec, $terminal
@@ -22,7 +19,7 @@ bind = $mainMod SHIFT, F, fullscreen,
 bind = $mainMod, R, exec, pkill waybar && waybar &
 bind = $mainMod, S, exec, yad --html < ~/.config/hypr/keybindings.md --button=OK:0
 
-<h2>Screenshot a region</h2>
+#### Screenshot a region
 bind = , PRINT, exec, hyprshot -m region
 #### Screenshot a window
 bind = $shiftMod, PRINT, exec, hyprshot -m window
@@ -103,7 +100,4 @@ bindl  = , XF86AudioPrev, exec, playerctl previous # media previous
 
 #### Brightness control
 bindel = , XF86MonBrightnessUp, exec, $scrPath/brightnesscontrol.sh i # increase brightness
-bindel = , XF86MonBrightnessDown, exec, $scrPath/brightnesscontrol.sh d # decrease brightness </p> 
-</body> 
-
-</html>
+bindel = , XF86MonBrightnessDown, exec, $scrPath/brightnesscontrol.sh d # decrease brightness

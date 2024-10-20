@@ -1,7 +1,4 @@
 #!/bin/bash
 
-QT_QPA_PLATFORM="xcb" 
+QT_QPA_PLATFORM="xcb" synology-drive autostart
 wait
-synology-drive autostart
-wait
-
