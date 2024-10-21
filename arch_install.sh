@@ -51,6 +51,7 @@ paru -S waybar --noconfirm
 paru -S wl-gammarelay --noconfirm
 paru -S swww --noconfirm
 paru -S pamixer --noconfirm
+paru -S fuzzel --noconfirm
 paru -S pavucontrol --noconfirm
 paru -S wireplumber --noconfirm
 paru -S libdbusmenu-gtk3 --noconfirm
@@ -84,11 +85,15 @@ paru -S noto-color-emoji-fontconfig-no-binding --noconfirm
 paru -S nautilus-renamer --noconfirm
 paru -S nautilus-open-any-terminal --noconfirm
 paru -S code-nautilus-git --noconfirm
+paru -S libnotify --noconfirm
+paru -S wtype --noconfirm
+paru -S wl-clipboard --noconfirm
 paru -S gimp-devel --noconfirm
 paru -S vesktop --noconfirm
 paru -S synochat --noconfirm
 paru -S synology-drive --noconfirm
 paru -S visual-studio-code-bin --noconfirm
+paru -S mission-center --noconfirm
 flatpak install flathub com.google.Chrome -y
 flatpak install flathub md.obsidian.Obsidian -y
 flatpak install flathub com.dropbox.Client -y
@@ -102,6 +107,18 @@ flatpak install flathub com.valvesoftware.Steam -y
 # Dynamic Cursor
 hyprpm add https://github.com/virtcode/hypr-dynamic-cursors
 hyprpm enable dynamic-cursors
+
+
+# Fuzzmoji
+git clone https://codeberg.org/codingotaku/fuzzmoji.git
+cd fuzzmoji
+sudo mkdir -p /usr/share/fuzzmoji/emoji-list
+sudo cp emoji-list /usr/share/fuzzmoji/emoji-list
+sudo cp fuzzmoji /usr/bin/fuzzmoji
+cd ..
+sudo rm -R fuzzmoji
+
+
 
 
 mkdir -p $HOME/.fonts
