@@ -26,18 +26,14 @@ cd yay
 makepkg -si --noconfirm && cd ..
 
 
-# First round of installs
+# Installs
+yay -Syu
 yay -S hyprshot --noconfirm
 yay -S eww --noconfirm
 yay -S rofi --noconfirm
 yay -S dconf --noconfirm
 yay -S nwg-displays --noconfirm
 yay -S wlogout --noconfirm
-
-
-
-
-# Install necessary packages using Paru
 paru -Syu 
 paru -S swaync --noconfirm
 paru -S xplr --noconfirm
@@ -93,6 +89,7 @@ paru -S vesktop --noconfirm
 paru -S synochat --noconfirm
 paru -S synology-drive --noconfirm
 paru -S visual-studio-code-bin --noconfirm
+paru -S github-desktop-bin --noconfirm
 paru -S mission-center --noconfirm
 flatpak install flathub com.google.Chrome -y
 flatpak install flathub md.obsidian.Obsidian -y
