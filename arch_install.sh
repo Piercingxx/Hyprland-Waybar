@@ -34,6 +34,7 @@ yay -S rofi --noconfirm
 yay -S dconf --noconfirm
 yay -S nwg-displays --noconfirm
 yay -S wlogout --noconfirm
+yay -S wtype-git --noconfirm
 paru -Syu 
 paru -S swaync --noconfirm
 paru -S xplr --noconfirm
@@ -82,7 +83,6 @@ paru -S nautilus-renamer --noconfirm
 paru -S nautilus-open-any-terminal --noconfirm
 paru -S code-nautilus-git --noconfirm
 paru -S libnotify --noconfirm
-paru -S wtype --noconfirm
 paru -S wl-clipboard --noconfirm
 paru -S gimp-devel --noconfirm
 paru -S vesktop --noconfirm
@@ -102,8 +102,13 @@ flatpak install flathub com.valvesoftware.Steam -y
 
 
 # Dynamic Cursor
+hyprpm update --no-shallow
+hyprpm reload
+hyprpm add https://github.com/hyprwm/hyprland-plugins
 hyprpm add https://github.com/virtcode/hypr-dynamic-cursors
 hyprpm enable dynamic-cursors
+hyprpm enable hyprtrails
+hyprpm enable hyprexpo
 
 
 # Fuzzmoji
