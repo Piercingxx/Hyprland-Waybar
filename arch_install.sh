@@ -135,6 +135,9 @@ rm Meslo.zip
 
 #Synology Drive doesnt support wayland so run this..
 QT_QPA_PLATFORM=xcb
+#Steam audio issues so run this..
+ALSOFT_DRIVERS=pulse
+
 
 
 # Customizations 
