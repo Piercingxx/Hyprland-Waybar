@@ -8,7 +8,7 @@
 @import url("file:///usr/share/gimp/2.99/themes/Default/gimp-dark.css");
 @import url("file:///etc/gimp/2.99/gimp.css");
 
-* { -gtk-icon-style: symbolic; }
+* { -gtk-icon-style: regular; }
 
 /* prefer-dark-theme */
 

@@ -1,14 +1,14 @@
 # GIMP user context
 
-(tool "gimp-move-tool")
-(paint-info "gimp-paintbrush")
+(tool "gimp-heal-tool")
+(paint-info "gimp-heal")
 (foreground
     (color "R'G'B'A double" 32 "\0\0\0\0\0\0\360\77\0\0\0\0\0\0\360\77\0\0\0\0\0\0\360\77\0\0\0\0\0\0\360\77" 0))
 (background
     (color "R'G'B'A double" 32 "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\360\77" 0))
 (brush "2. Hardness 100")
 (dynamics "Pressure Opacity")
-(mybrush "blend+paint")
+(mybrush "100% Opaque")
 (pattern "Pine")
 (gradient "FG to BG (RGB)")
 (palette "Default")
