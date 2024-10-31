@@ -122,7 +122,6 @@ sudo rm -R fuzzmoji
 
 
 
-
 mkdir -p $HOME/.fonts
 cd $HOME/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
@@ -131,6 +130,18 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
 unzip Meslo.zip
 rm Firacode.zip
 rm Meslo.zip
+
+
+#Docker 
+pacman -S docker --noconfirm
+yay -S docker-desktop --noconfirm
+#AI 
+curl -fsSL https://ollama.com/install.sh | sh
+ollama pull gemma2
+ollama pull rolandroland/llama3.1-uncensored
+#OpenWebUi
+docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+
 
 
 #Synology Drive doesnt support wayland so run this..
