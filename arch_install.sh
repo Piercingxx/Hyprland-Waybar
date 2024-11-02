@@ -141,6 +141,7 @@ sudo pacman -U ./docker-desktop-x86_64.pkg.tar.zst
 curl -fsSL https://ollama.com/install.sh | sh
 ollama pull gemma2
 ollama pull rolandroland/llama3.1-uncensored
+ollama pull mistral-nemo
 #OpenWebUi
 docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 
