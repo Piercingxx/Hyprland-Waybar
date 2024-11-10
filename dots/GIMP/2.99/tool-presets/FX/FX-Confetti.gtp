@@ -5,7 +5,7 @@
 (tool-options "GimpPaintOptions"
     (tool "gimp-paintbrush-tool")
     (foreground
-        (color "R'G'B'A double" 32 "\0\0\0\340\233\41\272\77\0\0\0\200\24\212\307\77\0\0\0\300\245\4\343\77\0\0\0\0\0\0\360\77" 0))
+        (color "R'G'B'A double" 32 "\0\0\0\240\241\41\272\77\0\0\0\100\27\212\307\77\0\0\0\200\246\4\343\77\0\0\0\0\0\0\360\77" 0))
     (opacity 0.80000000000000004)
     (brush "1. Pixel")
     (dynamics "Confetti")

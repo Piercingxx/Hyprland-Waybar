@@ -5,7 +5,7 @@
 (tool-options "GimpPaintOptions"
     (tool "gimp-paintbrush-tool")
     (foreground
-        (color "R'G'B'A double" 32 "\0\0\0\0\0\0\0\0\0\0\0\300\350\53\230\77\0\0\0\0\62\55\302\77\0\0\0\0\0\0\360\77" 0))
+        (color "R'G'B'A double" 32 "\0\0\0\0\0\0\0\0\0\0\0\300\350\53\230\77\0\0\0\200\64\55\302\77\0\0\0\0\0\0\360\77" 0))
     (brush "2. Hardness 075")
     (dynamics "Pressure Opacity")
     (pattern "Pine")
