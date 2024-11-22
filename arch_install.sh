@@ -99,7 +99,7 @@ flatpak install flathub org.gnome.SimpleScan -y
 flatpak install flathub org.blender.Blender -y
 flatpak install flathub io.missioncenter.MissionCenter -y
 flatpak install flathub com.valvesoftware.Steam -y
-yay -S android-sdk-platform-tools --noconfirm
+pacman -S android-tools --noconfirm
 
 # Dynamic Cursor
 hyprpm update --no-shallow
