@@ -10,6 +10,7 @@ yay -S dconf --noconfirm
 yay -S nwg-displays --noconfirm
 yay -S wlogout --noconfirm
 yay -S wtype-git --noconfirm
+yay -S google-chrome --noconfirm
 paru -Syu 
 paru -S swaync --noconfirm
 paru -S xplr --noconfirm
@@ -66,7 +67,6 @@ paru -S synology-drive --noconfirm
 paru -S visual-studio-code-bin --noconfirm
 paru -S github-desktop-bin --noconfirm
 paru -S mission-center --noconfirm
-flatpak install flathub com.google.Chrome -y
 flatpak install flathub md.obsidian.Obsidian -y
 flatpak install flathub com.dropbox.Client -y
 flatpak install flathub org.libreoffice.LibreOffice -y
