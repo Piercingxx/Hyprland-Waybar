@@ -73,7 +73,7 @@ flatpak install flathub org.libreoffice.LibreOffice -y
 flatpak install flathub org.gnome.SimpleScan -y
 flatpak install flathub org.blender.Blender -y
 flatpak install flathub io.missioncenter.MissionCenter -y
-flatpak install flathub com.valvesoftware.Steam -y
+flatpak install flathub com.mattjakeman.ExtensionManager -y
 
 # Dynamic Cursor
 hyprpm update --no-shallow
