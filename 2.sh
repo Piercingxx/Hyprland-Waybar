@@ -43,7 +43,6 @@ paru -S light --noconfirm
 paru -S nwg-look --noconfirm
 paru -S yad --noconfirm
 paru -S sox --noconfirm
-paru -S mint-themes --noconfirm
 paru -S xcursor-simp1e-gruvbox-light --noconfirm
 paru -S qt5-wayland --noconfirm
 paru -S xdg-desktop-portal --noconfirm
