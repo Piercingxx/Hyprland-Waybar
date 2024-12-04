@@ -74,6 +74,7 @@ paru -S synology-drive --noconfirm
 paru -S visual-studio-code-bin --noconfirm
 paru -S github-desktop-bin --noconfirm
 paru -S mission-center --noconfirm
+paru -S davinci-resolve-studio --noconfirm
 flatpak install flathub md.obsidian.Obsidian -y
 flatpak install flathub org.libreoffice.LibreOffice -y
 flatpak install flathub org.gnome.SimpleScan -y
