@@ -66,6 +66,10 @@ paru -S ttf-ms-fonts --noconfirm
 paru -S terminus-font-ttf --noconfirm
 paru -S noto-color-emoji-fontconfig-no-binding --noconfirm
 
+
+# Davinci Resolve Dependencies 
+pacman -S libpng12 lib32-libpng12 ocl-icd openssl-1.0 opencl-driver qt5-websockets --noconfirm
+
 # Applications
 paru -S gimp-devel --noconfirm
 paru -S vesktop --noconfirm
