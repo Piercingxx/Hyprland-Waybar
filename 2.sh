@@ -5,7 +5,7 @@
 
 
 flatpak install flathub com.mattjakeman.ExtensionManager -y
-paru -S brave-beta-bin --noconfirm
+paru -S floorp-bin --noconfirm
 
 yay -Syu
 yay -S hyprshot --noconfirm
