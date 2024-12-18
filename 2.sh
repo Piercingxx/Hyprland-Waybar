@@ -5,7 +5,7 @@
 
 
 flatpak install flathub com.mattjakeman.ExtensionManager -y
-yay -S google-chrome --noconfirm
+paru -S brave-beta-bin --noconfirm
 
 yay -Syu
 yay -S hyprshot --noconfirm
