@@ -5,7 +5,7 @@
 
 
 flatpak install flathub com.mattjakeman.ExtensionManager -y
-paru -S floorp-bin --noconfirm
+paru -S waterfox --noconfirm
 
 yay -Syu
 yay -S hyprshot --noconfirm
@@ -57,6 +57,9 @@ paru -S xdg-desktop-portal-hyprland --noconfirm
 paru -S nautilus-renamer --noconfirm
 paru -S nautilus-open-any-terminal --noconfirm
 paru -S code-nautilus-git --noconfirm
+
+# Youtube Music TUI
+paru -S youtui --noconfirm
 
 # Fonts
 paru -S papirus-icon-theme --noconfirm

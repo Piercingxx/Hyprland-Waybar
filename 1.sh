@@ -26,8 +26,9 @@ cd yay
 makepkg -si --noconfirm && cd ..
 
 
-pacman -S android-tools --noconfirm
+# pacman -S android-tools --noconfirm
 pacman -S steam --noconfirm
+pacman -S mpd --noconfirm
 
 
 
