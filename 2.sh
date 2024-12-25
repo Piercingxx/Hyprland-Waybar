@@ -82,12 +82,24 @@ paru -S synology-drive --noconfirm
 paru -S visual-studio-code-bin --noconfirm
 paru -S github-desktop-bin --noconfirm
 paru -S mission-center --noconfirm
-#currently erroring paru -S davinci-resolve-studio --noconfirm
 flatpak install flathub md.obsidian.Obsidian -y
 flatpak install flathub org.libreoffice.LibreOffice -y
 flatpak install flathub org.gnome.SimpleScan -y
 flatpak install flathub org.blender.Blender -y
 flatpak install flathub io.missioncenter.MissionCenter -y
+
+
+# Gimp dotfiles
+git clone https://github.com/Piercingxx/gimp-dots.git
+chmod u+x gimp-dots
+chown -R "$username":"$username" gimp-dots
+rm -rf /home/"$username"/.var/app/org.gimp.GIMP/config/GIMP/*
+rm -rf /home/"$username"/.config/GIMP/*
+cd gimp-dots/Gimp || exit
+cp -R 3.0 /home/"$username"/.var/app/org.gimp.GIMP/config/GIMP/
+cp -R 3.0 /home/"$username"/.config/GIMP/
+cd "$builddir" || exit
+
 
 # Dynamic Cursor
 hyprpm update --no-shallow
