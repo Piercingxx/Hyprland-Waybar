@@ -20,6 +20,15 @@ paru -Syu
 paru -S swaync --noconfirm
 paru -S xplr --noconfirm
 paru -S cliphist --noconfirm
+paru -S glaze --noconfirm
+paru -S hyprlang-git --noconfirm
+paru -S hyprlang-protocols-git --noconfirm
+paru -S hyprutils-git --noconfirm
+paru -S hyprland-qtutils-git --noconfirm
+paru -S hyprwayland-scanner-git --noconfirm
+paru -S aquamarine-git --noconfirm
+paru -S hyprcursor-git --noconfirm
+paru -S hyprgraphics-git --noconfirm
 paru -S hyprland --noconfirm
 paru -S hyprpaper --noconfirm
 paru -S hyprlock --noconfirm
