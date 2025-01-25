@@ -39,6 +39,7 @@ paru -S wl-gammarelay --noconfirm
 paru -S swww --noconfirm
 paru -S pamixer --noconfirm
 paru -S cava --noconfirm
+paru -S nwg-drawer --noconfirm
 paru -S fuzzel --noconfirm
 paru -S wl-clipboard --noconfirm
 paru -S pavucontrol --noconfirm
