@@ -1,5 +1,13 @@
 #!/bin/bash
 
+username=$(id -u -n 1000)
+builddir=$(pwd)
+
+# Checks for active network connection
+if [[ -n "$(command -v nmcli)" && "$(nmcli -t -f STATE g)" != connected ]]; then
+  awk '{print}' <<<"Network connectivity is required to continue."
+  exit
+fi
 
 # Installs
 paru -Syu
@@ -31,7 +39,7 @@ paru -S waybar --noconfirm
 # Menus
 paru -S nwg-drawer --noconfirm
 paru -S fuzzel --noconfirm
-paru -S yad --noconfirm
+#paru -S yad --noconfirm
 paru -S wlogout --noconfirm
 paru -S libdbusmenu-gtk3 --noconfirm
 
@@ -103,6 +111,17 @@ paru -S blueman --noconfirm
 paru -S nwg-look --noconfirm
 
 # Fonts & Icons & Cursors
+mkdir -p $HOME/.fonts
+chmod -R u+x $HOME/.fonts
+chown -R "$username":"$username" $HOME/.fonts
+cd $HOME/.fonts || exit
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
+unzip FiraCode.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
+unzip Meslo.zip
+rm Firacode.zip
+rm Meslo.zip
+cd "$builddir" || exit
 paru -S papirus-icon-theme --noconfirm
 paru -S ttf-firacode --noconfirm
 paru -S awesome-terminal-fonts --noconfirm
@@ -146,7 +165,7 @@ cd "$builddir" || exit
 
 
 # Dynamic Cursor
-hyprpm update --no-shallow
+hyprpm update
 hyprpm reload
 hyprpm add https://github.com/hyprwm/hyprland-plugins
 hyprpm add https://github.com/virtcode/hypr-dynamic-cursors
@@ -163,16 +182,6 @@ sudo cp fuzzmoji /usr/bin/fuzzmoji
 cd ..
 sudo rm -R fuzzmoji
 
-
-
-mkdir -p $HOME/.fonts
-cd $HOME/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
-unzip FiraCode.zip
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
-unzip Meslo.zip
-rm Firacode.zip
-rm Meslo.zip
 
 
 # Used for fstab
