@@ -95,7 +95,6 @@ flatpak install flathub md.obsidian.Obsidian -y
 flatpak install flathub org.libreoffice.LibreOffice -y
 flatpak install flathub org.gnome.SimpleScan -y
 flatpak install flathub org.blender.Blender -y
-flatpak install flathub io.missioncenter.MissionCenter -y
 
 
 # Gimp dotfiles
