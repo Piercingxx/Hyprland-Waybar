@@ -147,6 +147,13 @@ rm Firacode.zip
 rm Meslo.zip
 
 
+# Used for fstab
+mkdir -p /media/Working-Storage
+mkdir -p /media/Archived-Storage
+chown "$username":"$username" /home/"$username"/media/Archived-Storage
+chown "$username":"$username" /home/"$username"/media/Working-Storage
+
+
 #Docker 
 sudo wget https://download.docker.com/linux/static/stable/x86_64/docker-27.2.1.tgz -qO- | tar xvfz - docker/docker --strip-components=1
 sudo mv ./docker /usr/local/bin
