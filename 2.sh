@@ -49,7 +49,7 @@ paru -S notification-daemon --noconfirm
 paru -S swaync --noconfirm
 
 # File Explorer
-paru -S xplr --noconfirm
+#paru -S xplr --noconfirm
 paru -S ranger --noconfirm
 paru -S nautilus --noconfirm
 paru -S nautilus-renamer --noconfirm
