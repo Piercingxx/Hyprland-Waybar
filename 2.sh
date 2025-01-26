@@ -94,10 +94,11 @@ paru -S synology-drive --noconfirm
 paru -S visual-studio-code-bin --noconfirm
 paru -S github-desktop-bin --noconfirm
 paru -S mission-center --noconfirm
-flatpak install flathub md.obsidian.Obsidian -y
-flatpak install flathub org.libreoffice.LibreOffice -y
+paru -S obsidian --noconfirm
+paru -S libreoffice-fresh --noconfirm
+paru -S blender --noconfirm
 flatpak install flathub org.gnome.SimpleScan -y
-flatpak install flathub org.blender.Blender -y
+
 
 
 # Davinci Resolve Dependencies 
