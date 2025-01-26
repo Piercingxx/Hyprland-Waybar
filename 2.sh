@@ -86,12 +86,9 @@ paru -S terminus-font-ttf --noconfirm
 paru -S noto-color-emoji-fontconfig --noconfirm
 
 
-# Davinci Resolve Dependencies 
-pacman -S libpng12 lib32-libpng12 ocl-icd openssl-1.0 opencl-driver qt5-websockets --noconfirm
-
 # Applications
 paru -S gimp-devel --noconfirm
-paru -S vesktop --noconfirm
+paru -S discord --noconfirm
 paru -S synochat --noconfirm
 paru -S synology-drive --noconfirm
 paru -S visual-studio-code-bin --noconfirm
@@ -101,6 +98,10 @@ flatpak install flathub md.obsidian.Obsidian -y
 flatpak install flathub org.libreoffice.LibreOffice -y
 flatpak install flathub org.gnome.SimpleScan -y
 flatpak install flathub org.blender.Blender -y
+
+
+# Davinci Resolve Dependencies 
+pacman -S libpng12 lib32-libpng12 ocl-icd openssl-1.0 opencl-driver qt5-websockets --noconfirm
 
 
 # Gimp dotfiles
