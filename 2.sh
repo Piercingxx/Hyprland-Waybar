@@ -6,11 +6,12 @@
 
 flatpak install flathub com.mattjakeman.ExtensionManager -y
 paru -S waterfox --noconfirm
+paru -S pacseek --noconfirm
 
 paru -Syu
 paru -S hyprshot --noconfirm
 paru -S eww --noconfirm
-paru -S rofi --noconfirm
+paru -S wofi --noconfirm
 paru -S dconf --noconfirm
 paru -S nwg-displays --noconfirm
 paru -S wlogout --noconfirm
@@ -28,6 +29,7 @@ paru -S hyprwayland-scanner-git --noconfirm
 paru -S aquamarine-git --noconfirm
 paru -S hyprcursor-git --noconfirm
 paru -S hyprgraphics-git --noconfirm
+
 paru -S hyprland --noconfirm
 paru -S hyprpaper --noconfirm
 paru -S hyprlock --noconfirm
@@ -56,7 +58,6 @@ paru -S blueman --noconfirm
 paru -S lxsession --noconfirm
 paru -S brightnessctl --noconfirm
 paru -S light --noconfirm
-paru -S nwg-look --noconfirm
 paru -S yad --noconfirm
 paru -S sox --noconfirm
 paru -S xcursor-simp1e-gruvbox-light --noconfirm
@@ -71,13 +72,16 @@ paru -S code-nautilus-git --noconfirm
 # Youtube Music TUI
 paru -S youtui --noconfirm
 
+# Customize Icons and Cursors and Stuff
+paru -S nwg-look --noconfirm
+
 # Fonts
 paru -S papirus-icon-theme --noconfirm
 paru -S ttf-firacode --noconfirm
 paru -S awesome-terminal-fonts --noconfirm
 paru -S ttf-ms-fonts --noconfirm
 paru -S terminus-font-ttf --noconfirm
-paru -S noto-color-emoji-fontconfig-no-binding --noconfirm
+paru -S noto-color-emoji-fontconfig --noconfirm
 
 
 # Davinci Resolve Dependencies 
