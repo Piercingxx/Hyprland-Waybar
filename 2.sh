@@ -7,16 +7,15 @@
 flatpak install flathub com.mattjakeman.ExtensionManager -y
 paru -S waterfox --noconfirm
 
-yay -Syu
-yay -S hyprshot --noconfirm
-yay -S eww --noconfirm
-yay -S rofi --noconfirm
-yay -S dconf --noconfirm
-yay -S nwg-displays --noconfirm
-yay -S wlogout --noconfirm
-yay -S wtype-git --noconfirm
-
-paru -Syu 
+paru -Syu
+paru -S hyprshot --noconfirm
+paru -S eww --noconfirm
+paru -S rofi --noconfirm
+paru -S dconf --noconfirm
+paru -S nwg-displays --noconfirm
+paru -S wlogout --noconfirm
+paru -S wtype-git --noconfirm
+ 
 paru -S swaync --noconfirm
 paru -S xplr --noconfirm
 paru -S cliphist --noconfirm
