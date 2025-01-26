@@ -11,12 +11,15 @@ paru -S pacseek --noconfirm
 paru -Syu
 paru -S hyprshot --noconfirm
 paru -S eww --noconfirm
-paru -S wofi --noconfirm
 paru -S dconf --noconfirm
 paru -S nwg-displays --noconfirm
 paru -S wlogout --noconfirm
 paru -S wtype-git --noconfirm
- 
+
+paru -S nwg-drawer --noconfirm
+paru -S fuzzel --noconfirm
+paru -S yad --noconfirm
+
 paru -S swaync --noconfirm
 paru -S xplr --noconfirm
 paru -S cliphist --noconfirm
@@ -40,8 +43,7 @@ paru -S wl-gammarelay --noconfirm
 paru -S swww --noconfirm
 paru -S pamixer --noconfirm
 paru -S cava --noconfirm
-paru -S nwg-drawer --noconfirm
-paru -S fuzzel --noconfirm
+
 paru -S wl-clipboard --noconfirm
 paru -S pavucontrol --noconfirm
 paru -S wireplumber --noconfirm
@@ -58,7 +60,7 @@ paru -S blueman --noconfirm
 paru -S lxsession --noconfirm
 paru -S brightnessctl --noconfirm
 paru -S light --noconfirm
-paru -S yad --noconfirm
+
 paru -S sox --noconfirm
 paru -S xcursor-simp1e-gruvbox-light --noconfirm
 paru -S qt5-wayland --noconfirm
