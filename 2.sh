@@ -114,6 +114,7 @@ paru -S xcursor-simp1e-gruvbox-light --noconfirm
 
 
 # Applications
+paru -S mpv --noconfirm
 paru -S gimp-devel --noconfirm
 paru -S discord --noconfirm
 paru -S synochat --noconfirm
