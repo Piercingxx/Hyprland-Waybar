@@ -2,88 +2,115 @@
 
 
 # Installs
-
+paru -Syu
 
 flatpak install flathub com.mattjakeman.ExtensionManager -y
 paru -S waterfox --noconfirm
 paru -S pacseek --noconfirm
 
-paru -Syu
-paru -S hyprshot --noconfirm
-paru -S eww --noconfirm
-paru -S dconf --noconfirm
-paru -S nwg-displays --noconfirm
-paru -S wlogout --noconfirm
-paru -S wtype-git --noconfirm
+# Hyprland Everything
+paru -S hyprland-meta-git --noconfirm
 
+#Screenshot
+paru -S hyprshot --noconfirm
+
+#Clipboard Manager
+paru -S cliphist --noconfirm
+paru -S wl-clipboard --noconfirm
+#paru -S eww --noconfirm
+
+#Gnome customization tool
+paru -S dconf --noconfirm
+
+#Monitor locator
+paru -S nwg-displays --noconfirm
+
+# Waybar
+paru -S waybar --noconfirm
+
+# Menus
 paru -S nwg-drawer --noconfirm
 paru -S fuzzel --noconfirm
 paru -S yad --noconfirm
-
-paru -S swaync --noconfirm
-paru -S xplr --noconfirm
-paru -S cliphist --noconfirm
-paru -S glaze --noconfirm
-paru -S hyprlang-git --noconfirm
-paru -S hyprlang-protocols-git --noconfirm
-paru -S hyprutils-git --noconfirm
-paru -S hyprland-qtutils-git --noconfirm
-paru -S hyprwayland-scanner-git --noconfirm
-paru -S aquamarine-git --noconfirm
-paru -S hyprcursor-git --noconfirm
-paru -S hyprgraphics-git --noconfirm
-
-paru -S hyprland --noconfirm
-paru -S hyprpaper --noconfirm
-paru -S hyprlock --noconfirm
-paru -S hypridle --noconfirm
-paru -S hyprpicker --noconfirm
-paru -S waybar --noconfirm
-paru -S wl-gammarelay --noconfirm
-paru -S swww --noconfirm
-paru -S pamixer --noconfirm
-paru -S cava --noconfirm
-
-paru -S wl-clipboard --noconfirm
-paru -S pavucontrol --noconfirm
-paru -S wireplumber --noconfirm
+paru -S wlogout --noconfirm
 paru -S libdbusmenu-gtk3 --noconfirm
-paru -S playerctl --noconfirm
+
+# Notifications
 paru -S libnotify --noconfirm
 paru -S notification-daemon --noconfirm
 paru -S swaync --noconfirm
+
+# File Explorer
+paru -S xplr --noconfirm
+paru -S ranger --noconfirm
+paru -S nautilus --noconfirm
+paru -S nautilus-renamer --noconfirm
+paru -S nautilus-open-any-terminal --noconfirm
+paru -S code-nautilus-git --noconfirm
+
+#Wallpaper
+paru -S swww --noconfirm
+
+# Allows keybindings to dynamically change the color temperature and software brightness
+paru -S wl-gammarelay --noconfirm
+paru -S brightnessctl --noconfirm
+paru -S light --noconfirm
+
+# Audio
+paru -S pamixer --noconfirm
+paru -S cava --noconfirm
+paru -S wireplumber --noconfirm
+paru -S playerctl --noconfirm
+#paru -S sox --noconfirm
+# Pulse Audio Volume Control
+paru -S pavucontrol --noconfirm
+
+# Network and Bluetooth
 paru -S networkmanager --noconfirm
 paru -S network-manager-applet --noconfirm
 paru -S bluez --noconfirm
 paru -S bluez-uti --noconfirm
 paru -S blueman --noconfirm
-paru -S lxsession --noconfirm
-paru -S brightnessctl --noconfirm
-paru -S light --noconfirm
 
-paru -S sox --noconfirm
-paru -S xcursor-simp1e-gruvbox-light --noconfirm
-paru -S qt5-wayland --noconfirm
-paru -S xdg-desktop-portal --noconfirm
-paru -S xdg-desktop-portal-gtk --noconfirm
-paru -S xdg-desktop-portal-hyprland --noconfirm
-paru -S nautilus-renamer --noconfirm
-paru -S nautilus-open-any-terminal --noconfirm
-paru -S code-nautilus-git --noconfirm
 
-# Youtube Music TUI
-paru -S youtui --noconfirm
+# Packages replaced by hyprland-meta-git
+#paru -S hyprlock --noconfirm
+#paru -S hypridle --noconfirm
+#paru -S hyprpicker --noconfirm
+#paru -S aquamarine-git --noconfirm
+#paru -S hyprcursor-git --noconfirm
+#paru -S hyprgraphics-git --noconfirm
+#paru -S hyprland --noconfirm
+#paru -S hyprpaper --noconfirm
+#paru -S hyprlang-git --noconfirm
+#paru -S hyprlang-protocols-git --noconfirm
+#paru -S hyprutils-git --noconfirm
+#paru -S hyprland-qtutils-git --noconfirm
+#paru -S hyprwayland-scanner-git --noconfirm
+#paru -S xdg-desktop-portal --noconfirm
+#paru -S xdg-desktop-portal-gtk --noconfirm
+#paru -S xdg-desktop-portal-hyprland --noconfirm
+#paru -S qt5-wayland --noconfirm
 
-# Customize Icons and Cursors and Stuff
+# Not Needed
+#paru -S lxsession --noconfirm
+#paru -S glaze --noconfirm
+
+# Youtube Music TUI (neat but not practical)
+# paru -S youtui --noconfirm
+
+# GUI Interface to Customize Icons and Cursors and Stuff
 paru -S nwg-look --noconfirm
 
-# Fonts
+# Fonts & Icons & Cursors
 paru -S papirus-icon-theme --noconfirm
 paru -S ttf-firacode --noconfirm
 paru -S awesome-terminal-fonts --noconfirm
 paru -S ttf-ms-fonts --noconfirm
 paru -S terminus-font-ttf --noconfirm
 paru -S noto-color-emoji-fontconfig --noconfirm
+paru -S wtype-git --noconfirm
+paru -S xcursor-simp1e-gruvbox-light --noconfirm
 
 
 # Applications
@@ -97,7 +124,7 @@ paru -S mission-center --noconfirm
 paru -S obsidian --noconfirm
 paru -S libreoffice-fresh --noconfirm
 paru -S blender --noconfirm
-flatpak install flathub org.gnome.SimpleScan -y
+#flatpak install flathub org.gnome.SimpleScan -y
 
 
 
