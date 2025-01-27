@@ -1,29 +1,34 @@
 
 {
     // Workspaces
-    "hyprland/workspaces" : {
+    "hyprland/workspaces": {
+        "format": "{icon}",
         "on-click": "activate",
-        "active-only": false,
         "all-outputs": true,
-        "format": "{}",
+        "sort-by-number": true,
         "format-icons": {
-			"urgent": "",
-			"active": "",
-			"default": ""
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10",
+          "focused": "",
+          "default": ""
         },
-  
-    },
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        },
 
     // Hyprland Window
     "hyprland/window": {
-        "rewrite": {
-            "(.*) - Brave": "$1",
-            "(.*) - Chromium": "$1",
-            "(.*) - Brave Search": "$1",
-            "(.*) - Outlook": "$1",
-            "(.*) Microsoft Teams": "$1"
-        },
-        "separate-outputs": true
+        "format": "{}",
+	"icon":true,
+	"icon-size" : 20
     },
 
     // Power Menu
@@ -47,8 +52,8 @@
 
     // System tray
     "tray": {
-        // "icon-size": 21,
-        "spacing": 10
+        // "icon-size": 23,
+        "spacing": 13
     },
 
     // Clock
@@ -82,11 +87,6 @@
 	}
 },
 
-
-
-
-
-
     // System
     "custom/system": {
         "format": "",
@@ -113,6 +113,16 @@
         "on-click": "kitty -e htop"
     }, 
 
+    // Temperature
+    "temperature": {
+        "thermal-zone": 7,  // Check with: # cat /sys/class/hwmon/hwmon*/temp1_input
+        "hwmon-path": "/sys/class/hwmon/hwmon7/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": "{temperatureF}°F ",
+        "format": "{temperatureF}°F "
+    },
+
+    // Language
     "hyprland/language": {
         "format": "/ K {short}"
     },
@@ -164,6 +174,16 @@
         "format-icons": [" ", " ", " ", " ", " "]
     },
 
+    // Backlight
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent: >3}%",
+        "format-icons": ["", ""],
+        "on-scroll-down": "brightnessctl -c backlight set 1%-",
+        "on-scroll-up": "brightnessctl -c backlight set +1%",
+        "on-click": "~/.config/waybar/scripts/backlight-hint.sh"
+    },
+
     // Pulseaudio
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -182,7 +202,8 @@
             "car": "",
             "default": ["", " ", " "]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
     },
 
     // Bluetooth

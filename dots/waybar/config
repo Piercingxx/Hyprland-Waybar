@@ -22,8 +22,13 @@
         "mpd", 
         "pulseaudio",
         "bluetooth",
-        "battery", 
         "tray",
+        "temperature",
+        "disk",
+        "memory",
+        "cpu",
+        "battery", 
+        "backlight",        
         "custom/exit"
     ]
 }
