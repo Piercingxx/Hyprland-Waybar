@@ -21,7 +21,6 @@
     "modules-right": [
         "mpd", 
         "pulseaudio",
-        "keyboard-state", 
         "bluetooth",
         "battery", 
         "tray",
