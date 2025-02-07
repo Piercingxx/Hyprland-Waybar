@@ -13,7 +13,8 @@ fi
 paru -Syu
 
 flatpak install flathub com.mattjakeman.ExtensionManager -y
-paru -S waterfox --noconfirm
+paru -S zen-browser-bin --noconfirm
+#paru -S waterfox --noconfirm
 paru -S pacseek --noconfirm
 
 # Hyprland Everything
