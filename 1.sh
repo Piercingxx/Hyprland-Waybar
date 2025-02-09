@@ -20,20 +20,9 @@ sudo pacman -Syu git --noconfirm
 # Clone and install Paru
 git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -si --noconfirm && cd ..
 
-# Install YaY
-#git clone https://aur.archlinux.org/yay.git
-#cd yay
-#makepkg -si --noconfirm && cd ..
-
 #Add Flatpak
 sudo pacman -S flatpak --noconfirm
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-
-# pacman -S android-tools --noconfirm
-pacman -S steam --noconfirm
-pacman -S mpd --noconfirm
-
 
 
 
