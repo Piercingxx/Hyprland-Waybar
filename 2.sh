@@ -13,12 +13,12 @@ fi
 paru -Syu
 
 flatpak install flathub com.mattjakeman.ExtensionManager -y
-paru -S zen-browser-bin --noconfirm
-#paru -S waterfox --noconfirm
+paru -S waterfox-bin --noconfirm
 paru -S pacseek --noconfirm
 
 # Hyprland Everything
 paru -S hyprland-meta-git --noconfirm
+paru -S hyprpaper --noconfirm
 
 #Screenshot
 paru -S hyprshot --noconfirm
@@ -90,7 +90,6 @@ paru -S blueman --noconfirm
 #paru -S hyprcursor-git --noconfirm
 #paru -S hyprgraphics-git --noconfirm
 #paru -S hyprland --noconfirm
-#paru -S hyprpaper --noconfirm
 #paru -S hyprlang-git --noconfirm
 #paru -S hyprlang-protocols-git --noconfirm
 #paru -S hyprutils-git --noconfirm
@@ -159,6 +158,7 @@ chmod -R u+x gimp-dots
 chown -R "$username":"$username" gimp-dots
 rm -rf /home/"$username"/.var/app/org.gimp.GIMP/config/GIMP/*
 rm -rf /home/"$username"/.config/GIMP/*
+chown -R "$username":"$username" /home/"$username"/.config/GIMP
 cd gimp-dots/Gimp || exit
 cp -R 3.0 /home/"$username"/.var/app/org.gimp.GIMP/config/GIMP/
 cp -R 3.0 /home/"$username"/.config/GIMP/
@@ -199,8 +199,8 @@ sudo mv ./docker /usr/local/bin
 sudo pacman -U ./docker-desktop-x86_64.pkg.tar.zst
 #AI 
 curl -fsSL https://ollama.com/install.sh | sh
-ollama pull gemma2
-ollama pull mistral-nemo
+#ollama pull gemma2
+#ollama pull mistral-nemo
 #OpenWebUi
 docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 
