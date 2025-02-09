@@ -10,6 +10,9 @@ if [[ -n "$(command -v nmcli)" && "$(nmcli -t -f STATE g)" != connected ]]; then
 fi
 
 # Installs
+# pacman -S android-tools --noconfirm
+pacman -S steam --noconfirm
+pacman -S mpd --noconfirm
 paru -Syu
 
 flatpak install flathub com.mattjakeman.ExtensionManager -y
