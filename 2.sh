@@ -92,23 +92,6 @@ paru -S blueman --noconfirm
 #paru -S aquamarine-git --noconfirm
 #paru -S hyprcursor-git --noconfirm
 #paru -S hyprgraphics-git --noconfirm
-#paru -S hyprland --noconfirm
-#paru -S hyprlang-git --noconfirm
-#paru -S hyprlang-protocols-git --noconfirm
-#paru -S hyprutils-git --noconfirm
-#paru -S hyprland-qtutils-git --noconfirm
-#paru -S hyprwayland-scanner-git --noconfirm
-#paru -S xdg-desktop-portal --noconfirm
-#paru -S xdg-desktop-portal-gtk --noconfirm
-#paru -S xdg-desktop-portal-hyprland --noconfirm
-#paru -S qt5-wayland --noconfirm
-
-# Not Needed
-#paru -S lxsession --noconfirm
-#paru -S glaze --noconfirm
-
-# Youtube Music TUI (neat but not practical)
-# paru -S youtui --noconfirm
 
 # GUI Interface to Customize Icons and Cursors and Stuff
 paru -S nwg-look --noconfirm
@@ -147,6 +130,7 @@ paru -S mission-center --noconfirm
 paru -S obsidian --noconfirm
 paru -S libreoffice-fresh --noconfirm
 paru -S blender --noconfirm
+paru -S wlsunset-git --noconfirm 
 #flatpak install flathub org.gnome.SimpleScan -y
 
 
