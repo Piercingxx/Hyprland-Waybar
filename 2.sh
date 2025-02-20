@@ -19,9 +19,12 @@ flatpak install flathub com.mattjakeman.ExtensionManager -y
 paru -S waterfox-bin --noconfirm
 paru -S pacseek --noconfirm
 
-# Hyprland Everything
+# Hyprland
 paru -S hyprland-meta-git --noconfirm
 paru -S hyprpaper --noconfirm
+paru -S hyprlock --noconfirm
+paru -S hypridle --noconfirm
+paru -S hyprcursor-git --noconfirm
 
 #Screenshot
 paru -S hyprshot --noconfirm
@@ -86,11 +89,8 @@ paru -S blueman --noconfirm
 
 
 # Packages replaced by hyprland-meta-git
-#paru -S hyprlock --noconfirm
-#paru -S hypridle --noconfirm
 #paru -S hyprpicker --noconfirm
 #paru -S aquamarine-git --noconfirm
-#paru -S hyprcursor-git --noconfirm
 #paru -S hyprgraphics-git --noconfirm
 
 # GUI Interface to Customize Icons and Cursors and Stuff
