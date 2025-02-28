@@ -54,6 +54,7 @@ paru -S libdbusmenu-gtk3 --noconfirm
 paru -S libnotify --noconfirm
 paru -S notification-daemon --noconfirm
 paru -S swaync --noconfirm
+paru -S polkit-gnome --noconfirm
 
 # File Explorer
 #paru -S xplr --noconfirm
