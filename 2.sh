@@ -121,7 +121,6 @@ paru -S xcursor-simp1e-gruvbox-light --noconfirm
 
 # Applications
 paru -S mpv --noconfirm
-paru -S gimp-devel --noconfirm
 paru -S discord --noconfirm
 paru -S synochat --noconfirm
 paru -S synology-drive --noconfirm
@@ -133,6 +132,9 @@ paru -S libreoffice-fresh --noconfirm
 paru -S blender --noconfirm
 paru -S wlsunset-git --noconfirm 
 #flatpak install flathub org.gnome.SimpleScan -y
+# Gimp and GPU drivers for it
+paru -S gimp-devel --noconfirm
+paru -S opencl-amd --noconfirm
 
 
 
