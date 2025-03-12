@@ -135,6 +135,7 @@ paru -S wlsunset-git --noconfirm
 # Gimp and GPU drivers for it
 paru -S gimp-devel --noconfirm
 paru -S opencl-amd --noconfirm
+#paru -S davinci-resolve-studio-beta --noconfirm
 
 
 
