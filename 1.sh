@@ -8,15 +8,15 @@ if [[ $EUID -eq 0 ]]; then
     exit 1
 fi
 
+sudo pacman -Syu
+sudo pacman -S zip unzip gzip tar make --noconfirm
+
 # Clone and install Paru
 git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -si --noconfirm && cd ..
 
 #Add Flatpak
 sudo pacman -S flatpak --noconfirm
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-sudo pacman -Syu
-sudo pacman -S zip unzip gzip tar make --noconfirm
 
 # Enable Bluetooth
 sudo systemctl start bluetooth
