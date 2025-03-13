@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 # Check if running as root. If root, script will exit
 if [[ $EUID -eq 0 ]]; then
     echo "This script should not be executed as root! Exiting......."
@@ -14,7 +12,7 @@ sudo pacman -S zip unzip gzip tar make --noconfirm
 # Clone and install Paru
 git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -si --noconfirm && cd ..
 
-#Add Flatpak
+# Add Flatpak
 sudo pacman -S flatpak --noconfirm
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
