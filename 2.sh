@@ -13,7 +13,13 @@ fi
 # pacman -S android-tools --noconfirm
 pacman -S steam --noconfirm
 pacman -S mpd --noconfirm
+pacman -S python --noconfirm
+pacman -S reflector --noconfirm
+
+reflector --verbose --sort rate -l 75 --save /etc/pacman.d/mirrorlist
 paru -Syu
+
+
 
 flatpak install flathub com.mattjakeman.ExtensionManager -y
 paru -S waterfox-bin --noconfirm
