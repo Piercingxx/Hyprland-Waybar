@@ -190,9 +190,10 @@ chown "$username":"$username" /home/"$username"/media/Working-Storage
 
 
 #Docker 
-sudo wget https://download.docker.com/linux/static/stable/x86_64/docker-27.2.1.tgz -qO- | tar xvfz - docker/docker --strip-components=1
+wget https://download.docker.com/linux/static/stable/x86_64/docker-28.0.4.tgz -qO- | tar xvfz - docker/docker --strip-components=1
 sudo mv ./docker /usr/local/bin
 ##Download the latest from https://docs.docker.com/desktop/release-notes/
+git clone https://desktop.docker.com/linux/main/amd64/187762/docker-desktop-x86_64.pkg.tar.zst
 sudo pacman -U ./docker-desktop-x86_64.pkg.tar.zst
 #AI 
 curl -fsSL https://ollama.com/install.sh | sh
