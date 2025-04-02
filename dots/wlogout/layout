@@ -7,7 +7,7 @@
 {
     "label" : "logout",
     "action" : "killall -9 Hyprland",
-    "text" : "Exit",
+    "text" : "Logout",
     "keybind" : "e"
 }
 {
