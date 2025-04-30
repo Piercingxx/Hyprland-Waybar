@@ -1,4 +1,13 @@
 #!/bin/bash
+# https://github.com/Piercingxx
+
+# Check if running as root. If root, script will exit
+if [[ $EUID -eq 0 ]]; then
+    echo "This script should not be executed as root! Exiting......."
+    exit 1
+fi
+
+#!/bin/bash
 # GitHub.com/PiercingXX
 
 gsettings set org.gnome.desktop.interface clock-format 24h
@@ -56,6 +65,11 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/ command "flatpak run com.tomjwatson.Emote"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/ name "Emoji"
 gsettings set org.gnome.desktop.wm.keybindings close "['<Super>Q']"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/control-center "['<Super>s']"
+dconf write /org/gnome/shell/keybindings/toggle-quick-settings "[]"
+dconf write /org/gnome/shell/extensions/forge/keybindings/prefs-open "[]"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/logout "[]"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/screensaver "['<Super>Return']"
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal kitty
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal flatpak system
@@ -73,6 +87,7 @@ dconf write /org/gnome/desktop/interface/monospace-font-name 'Terminus (TTF) Med
 dconf write /org/gnome/desktop/wm/preferences/button-layout 'appmenu:close'
 dconf write /org/gnome/system/location/enabled 'false'
 dconf write /org/gnome/desktop/privacy/report-technical-problems 'false'
+dconf write /org/gnome/shell/disabled-extensions "['cosmic-dock@system76.com', 'cosmic-workspaces@system76.com', 'popx11gestures@system76.com', 'ding@rastersoft.com', 'pop-cosmic@system76.com']"
 gnome-extensions enable ubuntu-appindicators@ubuntu.com
 gnome-extensions enable gsconnect@andyholmes.github.io
 gnome-extensions enable awesome-tiles@velitasali.com
@@ -85,6 +100,8 @@ gnome-extensions enable forge@jmmaranan.com
 gnome-extensions enable pop-shell@system76.com
 gnome-extensions enable space-bar@luchrioh
 gnome-extensions enable useless-gaps@pimsnel.com
+gnome-extensions enable system76-power@system76.com
+gnome-extensions disable background-logo@fedorahosted.org
 dconf wrote /org/gnome/shell/extensions/useless-gaps/gap-size "20"
 dconf write /org/gnome/shell/extensions/just-perfection/dash-icon-size "48"
 dconf write /org/gnome/shell/extensions/just-perfection/animation "3"
@@ -122,3 +139,8 @@ dconf write /org/gnome/shell/extensions/forge/tabbed-tiling-mode-enabled 'false'
 dconf write /org/gnome/shell/extensions/forge/preview-hint-enabled 'false'
 dconf write /org/gnome/shell/extensions/forge/window-gap-size 'uint32 7'
 dconf write /org/gtk/gtk4/settings/color-chooser/selected-color "true, 1.0, 1.0, 1.0, 1.0"
+dconf write /org/gnome/shell/extensions/pop-cosmic/show-workspaces-button 'false'
+dconf write /org/gnome/shell/extensions/pop-cosmic/show-applications-button 'false'
+dconf write /org/gnome/system/location/enabled 'false'
+dconf write /org/gnome/desktop/privacy/report-technical-problems 'false'
+dconf write /org/gnome/shell/ubuntu/startup-sound "''"
