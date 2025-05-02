@@ -24,6 +24,10 @@ dconf write /org/gnome/desktop/interface/document-font-name 'FiraCode Nerd Font 
 dconf write /org/gnome/desktop/interface/monospace-font-name 'Terminus (TTF) Medium 12'
 dconf write /org/gnome/desktop/wm/preferences/button-layout 'appmenu:close'
 dconf write /org/gnome/system/location/enabled 'false'
+dconf write /org/gnome/desktop/privacy/recent-files-max-age "1"
+dconf write /org/gnome/desktop/privacy/remove-old-trash-files "true"
+dconf write /org/gnome/desktop/privacy/remove-old-temp-files "true"
+dconf write /org/gnome/desktop/privacy/old-files-age "1"
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 gsettings set org.gnome.desktop.interface show-battery-percentage true
