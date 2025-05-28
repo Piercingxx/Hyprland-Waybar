@@ -10,6 +10,7 @@ fi
 #!/bin/bash
 # GitHub.com/PiercingXX
 
+gsettings set org.gnome.desktop.interface enable-animations false
 gsettings set org.gnome.desktop.interface clock-format 24h
 gsettings set org.gnome.desktop.interface clock-show-weekday true
 gsettings set org.gnome.desktop.peripherals.keyboard numlock-state true
