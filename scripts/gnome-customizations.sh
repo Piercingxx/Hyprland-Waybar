@@ -149,3 +149,6 @@ dconf write /org/gnome/shell/extensions/pop-cosmic/show-applications-button 'fal
 dconf write /org/gnome/system/location/enabled 'false'
 dconf write /org/gnome/desktop/privacy/report-technical-problems 'false'
 dconf write /org/gnome/shell/ubuntu/startup-sound "''"
+
+#fractional scaling
+gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
